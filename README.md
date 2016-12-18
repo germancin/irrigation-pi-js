@@ -41,6 +41,7 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
 ## Installing by .sh files
 
+###  setup.sh
 #### First create a file under the directory "home/pi/"
 ``` vim setup.sh ```
 
@@ -66,6 +67,30 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
 ```
 
+###  git-sshkey-setup.sh
+#### Create the ssh key pair for github
+``` vim git-sshkey-setup.sh ```
+
+#### Then copy this content
+``` bash
+
+	#!/bin/bash
+
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+
+	echo "Creating keypair"
+	ssh-keygen -t rsa -b 4096 -C "german.gonzalez@zumba.com"
+	vim ~/.ssh/id_rsa.pub
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/id_rsa
+	echo "Copies the contents of the id_rsa.pub file to your clipboard"
+	echo "In the upper-right corner of any page, click your profile photo, then click Settings."
+	echo "In the user settings sidebar, click SSH and GPG keys."
+	echo "Click New SSH key or Add SSH key."
+	echo "go to https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
+	echo "And follow the instructions"
+
+```
 
 
 
