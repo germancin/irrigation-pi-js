@@ -37,6 +37,7 @@ var self = module.exports = {
 		console.log(':::The Irrigation is About To Finish::: ');
 		gpio.write(pin, 0, function(err) {
 			if (err) throw err
+			console.log(':::: - The Irrigation Finished - ::::');
 			self.sendMessage()
 		})
 
