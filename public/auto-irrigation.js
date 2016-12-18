@@ -6,13 +6,6 @@ var timeZone = 'America/New_York';
 
 module.exports = {
 
-	foo: function () {
-
-
-
-		console.log('Got  into foo' + timeZone);
-
-	},
 	setCron: function () {
 
 		//new cron('00 06 07 * * 6', function() {
