@@ -127,9 +127,14 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 ``` wget http://german-cv.com/irrigation/setup.sh && wget http://german-cv.com/irrigation/git-pull-files.sh && wget http://german-cv.com/irrigation/git-sshkey-setup.sh```
 
 ##### Then run in this order
-``` 1. sh setup.sh
-	2. sh git-sshkey-setup.sh
-	3. sh git-pull-files.sh
+```
+
+ 1. sh setup.sh
+
+ 2. sh git-sshkey-setup.sh
+
+ 3. sh git-pull-files.sh
+
 ```
 
 
