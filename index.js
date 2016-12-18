@@ -13,6 +13,7 @@ app.get('/', function(req, res) {
 
 	console.log(':::: Welcome ::::');
 	res.sendFile(__dirname + '/public/index.html');
+	gg.foo();
 	
 });
 
