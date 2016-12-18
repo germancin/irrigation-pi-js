@@ -29,7 +29,7 @@ module.exports = {
 	    })
 
 	},
-	turnOff: function () {
+	turnOff: function() {
 
 		console.log(':::The Irrigation is About To Finish::: ');
 		gpio.write(pin, 0, function(err) {
@@ -40,7 +40,7 @@ module.exports = {
 	},
 	sendMessage: function () {
 
-		var twilio = require('twilio')
+		var twilio = require('twilio');
 		var accountSid = 'AC4af2d1d9ea89fab22b21ff18a2348c99';
 		var authToken = '7b1c09ae1c0c491f2b0dead446766d06';  
 		var client = new twilio.RestClient(accountSid, authToken)
