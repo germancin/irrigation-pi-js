@@ -40,6 +40,11 @@
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 ## Installing by .sh files
+##### You have to create 3 bash files.
+	1. setup.sh
+	2. git-sshkey-setup.sh
+	3. git-pull-files.sh
+
 
 ###  setup.sh
 #### First create a file under the directory "home/pi/"
@@ -89,6 +94,22 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 	echo "Click New SSH key or Add SSH key."
 	echo "go to https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
 	echo "And follow the instructions"
+
+```
+
+#### Pull files from repository
+``` vim git-pull-files.sh ```
+
+#### Then copy this content
+``` bash
+
+	#!/bin/bash
+
+	git init 
+	git remote add origin git@github.com:germancin/irrigation-pi-js.git
+	git pull origin master
+	git config branch.master.remote origin
+	git config branch.master.merge refs/heads/master
 
 ```
 
