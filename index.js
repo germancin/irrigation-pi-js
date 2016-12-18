@@ -19,7 +19,7 @@ app.get('/state/:state', function(req, res) {
 
 		if(req.params.state === 'on') {
 
-			console.log('going to setup ON')
+			console.log('ON');
 
 			gpio.setup(pin, gpio.DIR_OUT, function(err) {
 
@@ -27,7 +27,7 @@ app.get('/state/:state', function(req, res) {
 
 		            if (err) throw err
 		        	res.redirect(req.get('referer'));
-		        	console.log('Led => ON')
+		        	console.log('GPIO => ON');
 
 		        })
 			})
@@ -35,15 +35,15 @@ app.get('/state/:state', function(req, res) {
 
 		if(req.params.state === 'off') {
 
-			console.log('going to setup OFF')
+			console.log('OFF')
 
 			gpio.setup(pin, gpio.DIR_OUT, function(err) {
 
 				gpio.write(pin, false, function(err) {
 
 					if (err) throw err
-			    	res.redirect(req.get('referer'))
-			    	console.log('Led => OFF')
+			    	res.redirect(req.get('referer'));
+			    	console.log('GPIO => OFF');
 
 			    })
 
@@ -54,6 +54,7 @@ app.get('/state/:state', function(req, res) {
 	
 });
 
+console.log('Listening Port...' + port);
 app.listen(port);
 
 
