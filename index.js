@@ -4,19 +4,14 @@ var path = require('path');
 var app = express();
 var pin = 16;
 var port = process.env.PORT || 80;
-
-var gg = require(__dirname +'/public/test-auto.js');
-
-gg.foo();
+require(__dirname +'/public/auto-irrigation.js').setCron();
 
 app.use(express.static(__dirname +'/public'));
 
 app.get('/', function(req, res) {
 
-	console.log(':::: Welcome ::::');
 	res.sendFile(__dirname + '/public/index.html');
-	
-	
+		
 });
 
 app.get('/state/:state', function(req, res) {
