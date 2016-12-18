@@ -5,7 +5,7 @@ var app = express();
 var pin = 16;
 var port = process.env.PORT || 80;
 
-var gg = require('test-auto.js');
+var gg = require(__dirname +'/public/index.js');
 
 app.use(express.static(__dirname +'/public'));
 
