@@ -7,13 +7,15 @@ var port = process.env.PORT || 80;
 
 var gg = require(__dirname +'/public/test-auto.js');
 
+gg.foo();
+
 app.use(express.static(__dirname +'/public'));
 
 app.get('/', function(req, res) {
 
 	console.log(':::: Welcome ::::');
 	res.sendFile(__dirname + '/public/index.html');
-	gg.foo();
+	
 	
 });
 
