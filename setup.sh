@@ -1,6 +1,8 @@
 #!/bin/bash
 
 clear
+sh git_setup.sh
+exit
 echo "The script starts now."
 sudo apt-get update
 echo "Installing Linux appt: build-essential npm git tree vim raspi-config"
