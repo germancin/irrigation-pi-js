@@ -11,7 +11,7 @@ module.exports = {
 		//new cron('00 06 07 * * 6', function() {
 
 			console.log('Start Watering Plant.')
-			$this.wateringPlant();
+			this.wateringPlant();
 
 		//}, null, true, timeZone);
 
