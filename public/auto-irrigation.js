@@ -13,6 +13,8 @@ var self = module.exports = {
 
 		console.log('====Watering Plant - Powered by: RASPBERRY PI====');
 
+		// form left to right 
+		// [00=>seconds, 38=>minutes, 13=>militarHrs, *, *, 0=>sunday]
 		new cron('00 38 13 * * 0', function() {
 
 			console.log('Start Watering Plant.')
