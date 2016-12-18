@@ -12,8 +12,8 @@ var self = module.exports = {
 	setCron: function () {
 
 		console.log('====Watering Plant - Powered by: RASPBERRY PI====');
-		
-		new cron('00 32 13 * * 0', function() {
+
+		new cron('00 38 13 * * 0', function() {
 
 			console.log('Start Watering Plant.')
 			self.wateringPlant();
