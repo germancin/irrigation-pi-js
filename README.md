@@ -128,4 +128,33 @@
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 
+## How to make run our script when boot?
+
+#### Run
+``` chmod 777 /etc/rc.local```
+
+``` vim /etc/rc.local```
+
+#### At the end of the file add 
+``` sudo node /home/pi/index.js```
+
+![alt text](http://content.screencast.com/users/germancin/folders/Jing/media/5bce8140-43f4-4a21-bda7-f76eebeb8149/00000203.png "line at the end of the rc.local")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
