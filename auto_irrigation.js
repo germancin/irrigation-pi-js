@@ -6,10 +6,10 @@ var timeZone = 'America/New_York';
 
 console.log('====Watering Plant - Powered by: RASPBERRY PI====');
 
-new cron('00 50 06 * * 7', function() {
+new cron('00 06 07 * * 6', function() {
 
 	console.log('Start Watering Plant.')
-	wateringPlant()
+	//wateringPlant()
 
 }, null, true, timeZone);
 
