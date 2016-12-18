@@ -70,7 +70,10 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 	echo 
 	echo "::::::: DONE :::::::"
 
-```
+``` 
+
+##### Then run it
+``` sh setup.sh```
 
 ###  git-sshkey-setup.sh
 #### Create the ssh key pair for github
@@ -97,6 +100,9 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
 ```
 
+##### Then run it
+``` sh git-sshkey-setup.sh```
+
 #### Pull files from repository
 ``` vim git-pull-files.sh ```
 
@@ -110,9 +116,12 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 	git pull origin master
 	git config branch.master.remote origin
 	git config branch.master.merge refs/heads/master
+	ls
 
 ```
 
+##### Then run it
+``` sh git-pull-files.sh```
 
 
 
