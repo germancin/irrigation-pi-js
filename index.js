@@ -5,9 +5,9 @@ var app = express();
 var pin = 16;
 var port = process.env.PORT || 80;
 
-app.use(express.static(__dirname +'/public'));
+require(__dirname + '/public/auto-irrigation.js').setCron();
 
-require('auto-irrigation.js').setCron();
+app.use(express.static(__dirname +'/public'));
 
 app.get('/', function(req, res) {
 
