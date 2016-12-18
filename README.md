@@ -1,6 +1,6 @@
 # irrigation-pi-js
 
-Raspberry Pi Installation
+#Raspberry Pi Installation
 
 Flash the memory of the raspberry : https://www.udemy.com/rpi-full-stack/learn/v4/t/lecture/3109460?start=555
 Get into the raspberry / ssh pi@192.168.1.149
