@@ -6,7 +6,7 @@
 #### Get into the raspberry / ssh pi@192.168.1.149
 #### Password: raspberry
 #### sudo apt-get update
-#### OPtional: sudo apt-get upgrade (It will take like 30 - 40 minutes)
+####     *Optional: sudo apt-get upgrade (It will take like 30 - 40 minutes)
 #### Install raspi-config to config the raspberry operation system
 #### sudo apt-get install -y build-essential npm git tree vim python-rpi.gpio
 #### sudo apt-get install -y raspi-config
