@@ -1,6 +1,6 @@
 .bash_logout
 .bashrc
-git-pull-files.sh
+git-pull-repository.sh
 git-sshkey-setup.sh
 setup.sh
 .profile
