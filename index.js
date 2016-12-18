@@ -7,7 +7,7 @@ var port = process.env.PORT || 80;
 
 app.use(express.static(__dirname +'/public'));
 
-require('/public/auto-irrigation.js').setCron();
+require('auto-irrigation.js').setCron();
 
 app.get('/', function(req, res) {
 
