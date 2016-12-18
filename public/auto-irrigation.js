@@ -1,5 +1,4 @@
 "use strict"
-
 var gpio = require('rpi-gpio');
 var cron = require('cron').CronJob;
 var pin = 16;
