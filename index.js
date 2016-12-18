@@ -4,9 +4,10 @@ var path = require('path');
 var app = express();
 var pin = 16;
 var port = process.env.PORT || 80;
-require(__dirname +'/public/auto-irrigation.js').setCron();
 
 app.use(express.static(__dirname +'/public'));
+
+require('/public/auto-irrigation.js').setCron();
 
 app.get('/', function(req, res) {
 
