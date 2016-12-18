@@ -2,9 +2,9 @@
 
 #Raspberry Pi Installation
 
-Flash the memory of the raspberry : https://www.udemy.com/rpi-full-stack/learn/v4/t/lecture/3109460?start=555
-Get into the raspberry / ssh pi@192.168.1.149
-Password: raspberry
+-Flash the memory of the raspberry : https://www.udemy.com/rpi-full-stack/learn/v4/t/lecture/3109460?start=555
+-Get into the raspberry / ssh pi@192.168.1.149
+-Password: raspberry
 sudo apt-get update
 OPtional: sudo apt-get upgrade (It will take like 30 - 40 minutes)
 Install raspi-config to config the raspberry operation system
