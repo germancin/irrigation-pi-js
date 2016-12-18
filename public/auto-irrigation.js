@@ -27,6 +27,7 @@ var self = module.exports = {
 		        gpio.write(pin, true, function(err) {
 					if (err) throw err
 
+					//remains on for the delay time.
 					setTimeout(function() {
 						self.turnOff();
 					}, delay)
@@ -39,6 +40,7 @@ var self = module.exports = {
 		console.log(':::The Irrigation is About To Finish::: ');
 		gpio.write(pin, 0, function(err) {
 			if (err) throw err
+
 			console.log(':::: - The Irrigation Finished - ::::');
 			self.sendMessage()
 		})
