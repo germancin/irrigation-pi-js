@@ -1,8 +1,6 @@
 #!/bin/bash
 
 clear
-sh git_setup.sh
-exit
 echo "The script starts now."
 sudo apt-get update
 echo "Installing Linux appt: build-essential npm git tree vim raspi-config"
@@ -15,4 +13,5 @@ sudo su
 sudo npm install -y rpi-gpio cron twilio express --save
 sudo npm install express-generator -g
 echo 
-echo "Done you are ready to go."
+echo "::::::: DONE :::::::"
+
