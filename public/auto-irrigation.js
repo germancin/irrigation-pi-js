@@ -1,17 +1,20 @@
+"use strict"
+
 var gpio = require('rpi-gpio');
 var cron = require('cron').CronJob;
 var pin = 16;
 var delay = 5000;
 var timeZone = 'America/New_York';
 
-module.exports = {
+
+var self = module.exports = {
 
 	setCron: function () {
 
 		//new cron('00 06 07 * * 6', function() {
 
 			console.log('Start Watering Plant.')
-			this.wateringPlant();
+			self.wateringPlant();
 
 		//}, null, true, timeZone);
 
@@ -20,10 +23,10 @@ module.exports = {
 
 	    gpio.setup(pin, gpio.DIR_OUT, function(err) {
 		        gpio.write(pin, true, function(err) {
-		            if (err) throw err
+					if (err) throw err
 
-	            	setTimeout(function() {
-						this.turnOff();
+					setTimeout(function() {
+						self.turnOff();
 					}, delay)
 		        })
 	    })
@@ -34,7 +37,7 @@ module.exports = {
 		console.log(':::The Irrigation is About To Finish::: ');
 		gpio.write(pin, 0, function(err) {
 			if (err) throw err
-			this.sendMessage()
+			self.sendMessage()
 		})
 
 	},
@@ -59,6 +62,8 @@ module.exports = {
 
 	}
 };
+
+
 
 
 
