@@ -13,24 +13,24 @@ var self = module.exports = {
 		var client = new twilio.RestClient(accountSid, authToken);
 
 		console.log(options);
-		
-		client.messages.create({
 
-		    to: '+17543669331',  // Text this number
-		    from: '+18134131741', // From a valid Twilio number
-		    body: options.msg,
-		    mediaUrl: "https://s-media-cache-ak0.pinimg.com/236x/e1/9a/72/e19a722a96542551e4cc68ce079baace.jpg"
+		// client.messages.create({
 
-		}, function(err, message) {
+		//     to: '+17543669331',  // Text this number
+		//     from: '+18134131741', // From a valid Twilio number
+		//     body: 'ddd',
+		//     mediaUrl: "https://s-media-cache-ak0.pinimg.com/236x/e1/9a/72/e19a722a96542551e4cc68ce079baace.jpg"
 
-			if(err) {
-				console.error(err.message);
-				return false;
-			}
+		// }, function(err, message) {
 
-			console.log('Message Sent: ' , message.id);
-			return true;
-		})
+		// 	if(err) {
+		// 		console.error(err.message);
+		// 		return false;
+		// 	}
+
+		// 	console.log('Message Sent: ' , message.id);
+		// 	return true;
+		// })
 
 	}
 };
