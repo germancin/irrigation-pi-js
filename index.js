@@ -61,8 +61,9 @@ app.get('/notification/:options', function(req, res) {
 
 	//notification.sendMMS(req.params.options);
 
+	console.log(req.params.options)
 
-	res.send(JSON.parse({ sent: true, carr:req.params.options }));
+	res.send(JSON.stringify({ sent: true }));
 
 
 });
