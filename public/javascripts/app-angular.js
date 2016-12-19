@@ -37,7 +37,8 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', funct
 
     };
 
-    $scope.testImage = function(){
+    $scope.sendMMSImage = function(){
+
         console.log('got into testImage');
         $scope.showImage = true;
 
@@ -106,6 +107,34 @@ app.service('rebootService', function(rebootFactory) {
     return self;
 });
 
+app.service('notificationService', function(notificationFactory) {
+
+    var self = {
+
+        'sendMMS': function(){
+
+            console.log('going to semd the request to the notificationFactory... to send MMS');
+            self.reboot = true;
+
+            var params = {
+                'arguments': [{
+                    'from': '12323',
+                    'to': '77777'
+                    'msg': 'this is my message'
+                }]
+            };
+
+            var response =  notificationFactory.sendMessage(params);
+
+            return response
+
+        },
+
+    }
+
+    return self;
+});
+
 
 
 
@@ -120,6 +149,14 @@ app.factory('ServiceStateDevice', ['$resource', function($resource) {
 app.factory('rebootFactory', ['$resource', function($resource) {
     return $resource("/reboot/:reboot", {reboot: '@reboot'}, {
         rebootDev: {
+            method: 'GET'
+        }
+    });
+}]);
+
+app.factory('notificationFactory', ['$resource', function($resource) {
+    return $resource("/notification/:params", {params: '@params'}, {
+        sendMessage: {
             method: 'GET'
         }
     });
