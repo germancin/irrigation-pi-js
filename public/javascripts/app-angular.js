@@ -12,7 +12,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
 		 	//turn on the led
 		 	stateDevice.on().$promise.then(function(response) {
 
-		 		console.log('Promise State: ON');
+		 		console.log('Promise State: ON', response);
                 $scope.status = true;
 
 			});
@@ -73,8 +73,6 @@ app.service('stateDevice', function(ServiceStateDevice) {
 
             var response =  ServiceStateDevice.details(params)
 
-            console.log(response);
-            
             return response
 
         },
