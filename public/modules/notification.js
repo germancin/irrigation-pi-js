@@ -23,11 +23,11 @@ var self = module.exports = {
 
 			if(err) {
 				console.error(err.message);
-				return false;
+				callback(false);
 			}
 
 			console.log('Message Sent: ' , message.id);
-			return true;
+			callback(true);
 		})
 
 	}

@@ -57,20 +57,11 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification', function(req, res) {
 
-	notification.sendImageMsg(req.query, function (err) {
+	notification.sendImageMsg(req.query, function (boolean) {
 
-		console.log('e donde vamos');
-		
-	},function(err, message) {
+		console.log('e donde vamos', boolean);
 
-			if(err) {
-				console.error(err.message);
-				
-			}
-
-			console.log('MMMMMMMMM');
-			
-	});
+	}
 
 	res.send(JSON.stringify({ sent: true }));
 
