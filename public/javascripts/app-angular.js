@@ -40,7 +40,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
     $scope.takePicture = function () {
 
         $scope.showImage = true;
-        
+
     };
 
     $scope.sendMMSImage = function(){
@@ -145,8 +145,14 @@ app.service('notificationService', function(notificationFactory) {
     return self;
 });
 
-
-
+// ::::::::::::::: FACTORIES :::::::::::::::
+app.factory('notificationFactory', ['$resource', function($resource) {
+    return $resource("/notification/:params", {arg: '@params'}, {
+        sendMessage: {
+            method: 'GET'
+        }
+    });
+}]);
 
 app.factory('ServiceStateDevice', ['$resource', function($resource) {
     return $resource("/state/:state", {state: '@state'}, {
@@ -164,12 +170,6 @@ app.factory('rebootFactory', ['$resource', function($resource) {
     });
 }]);
 
-app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/:params", {params: '@params'}, {
-        sendMessage: {
-            method: 'GET'
-        }
-    });
-}]);
+
 
 
