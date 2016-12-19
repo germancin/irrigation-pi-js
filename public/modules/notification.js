@@ -24,7 +24,7 @@ var self = module.exports = {
 		        return false;
 		    }
 		    
-		    console.log('Message Sent: ' , message.sid);
+		    console.log('Message Sent: ' , message);
 		    return true;
 		})
 
