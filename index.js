@@ -56,9 +56,9 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/reboot/:reboot', function(req, res) {
 
-	console.log(req, res);
+	console.log(res);
 
-	if(req.params.reboot) {
+	if(req.params.reboot === 'true') {
 
 		//reboot the device
 		console.log('rebiiting');
