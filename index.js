@@ -54,7 +54,7 @@ app.get('/state/:state', function(req, res) {
 	
 });
 
-app.get('/notification/:params', function(req, res) {
+app.get('/notification/', function(req, res) {
 
 	console.log('im in the notification endpoint');
 	return ['respuestaaaa'];
