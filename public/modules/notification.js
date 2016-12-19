@@ -13,7 +13,7 @@ var self = module.exports = {
 		var client = new twilio.RestClient(accountSid, authToken);
 		var twiml = new twilio.TwimlResponse();
 
-		client.messages.create({
+		twiml.messages.create({
 			body: 'Hola esto son buas notificaas',
 		    to: '+17543669331',  // Text this number
 		    from: '+18134131741', // From a valid Twilio number
