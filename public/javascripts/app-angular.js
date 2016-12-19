@@ -118,7 +118,7 @@ app.factory('ServiceStateDevice', ['$resource', function($resource) {
 }]);
 
 app.factory('rebootFactory', ['$resource', function($resource) {
-    return $resource("/reboot/", {reboot: '@reboot'}, {
+    return $resource("/reboot/:reboot", {reboot: '@reboot'}, {
         rebootDev: {
             method: 'GET'
         }
