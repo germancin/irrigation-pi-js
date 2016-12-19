@@ -13,10 +13,10 @@ var self = module.exports = {
 		var client = new twilio.RestClient(accountSid, authToken);
 
 		client.messages.create({
-		    body: 'Hola esto son buas notificaas',
+		    body: 'Sending message with picure',
 		    to: '+17543669331',  // Text this number
 		    from: '+18134131741', // From a valid Twilio number
-		    mediaUrl: 'http://192.168.0.111/img/office-plant.jpg'
+		    mediaUrl: "http://192.168.0.111/img/office-plant.jpg"
 		}, function(err, message) {
 
 		    if(err) {

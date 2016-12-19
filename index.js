@@ -61,6 +61,7 @@ app.get('/notification/:options', function(req, res) {
 
 	notification.sendMMS(req.params.options);
 
+	//console.log(res);
 	//var twilio = require('twilio');
 	//res.send(JSON.stringify({ resp: true }));
 
