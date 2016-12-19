@@ -61,7 +61,7 @@ app.get('/notification', function(req, res) {
 
 		console.log('e donde vamos', resp);
 
-	}
+	});
 
 	res.send(JSON.stringify({ sent: true }));
 
