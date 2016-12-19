@@ -21,8 +21,7 @@ var self = module.exports = {
 		}, function(err, message) {
 
 		    console.log('Message Sent: ' + message.sid);
-
-		    return JSON.stringify({ response: true });
+		    return true;
 
 		})
 

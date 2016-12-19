@@ -57,15 +57,11 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification/:options', function(req, res) {
 
-
 	console.log('notifications nodejs', req.params.options);
 
-	notification.sendMMS(req.params.options, function(err) {
+	notification.sendMMS(req.params.options);
 
-			console.log('mensaje.......', res);
-	});
-
-	return res;
+	res.send(JSON.stringify({ response: true }));
 
 });
 
