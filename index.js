@@ -57,7 +57,7 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification/:options', function(req, res) {
 
-	console.log('notifications nodejs', req.params.options);
+	console.log('HIT NODE GET notifications', req.params.options);
 
 	var tt = notification.sendMMS(req.params.options)
 	res.send(JSON.stringify({ sent: true, resp: tt }));
