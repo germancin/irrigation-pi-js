@@ -7,5 +7,7 @@
 .gitconfig
 git-pull-repository.sh
 git-sshkey-setup.sh
+reboot-device.sh
 setup.sh
 .profile
+
