@@ -56,7 +56,7 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/reboot/:reboot', function(req, res) {
 
-	console.log(';llego al nodejs express');
+	console.log('llego al nodejs express');
 	console.log(res);
 
 	if(req.params.reboot === 'true') {

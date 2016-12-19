@@ -25,29 +25,32 @@
 				    <div>
 
 				    	<table class="table table-striped">
-				    		<tr>
-				    			<td>Switch Irrigator: </td>
-				    			<td><button class="button"  ng-click="setState('on')" >ON</button>
+							<tr>
+								<td>Switch Irrigator: </td>
+								<td><button class="button"  ng-click="setState('on')" >ON</button>
 									<button class="button"  ng-click="setState('off')">OFF</button>
 								</td>
-				    			<td>Status {{status}}</td>
-				    		</tr>
-
-				    		<tr>
-				    			<td>Test Image: </td>
-				    			<td>
-				    				<button class="button"  ng-click="testImage()">Take Picture</button>
+								<td>Status {{status}}
+									<samp ng-if="status">ON</samp>
+									<samp ng-if="!status">OFF</samp>
 								</td>
-				    			<td><div ng-if="showImage" ng-init="showImage = false"> show image preview </div></td>
-				    		</tr>
+							</tr>
 
-				    		<tr>
-				    			<td>Reboot Device: </td>
-				    			<td>
-				    				<button class="button" ng-click="rebootDevice()">Reboot Device</button>
+							<tr>
+								<td>Test Image: </td>
+								<td>
+									<button class="button"  ng-click="testImage()">Take Picture</button>
 								</td>
-				    			<td></td>
-				    		</tr>
+								<td><div ng-if="showImage" ng-init="showImage = false"> show image preview </div></td>
+							</tr>
+
+							<tr>
+								<td>Reboot Device: </td>
+								<td>
+									<button class="button" ng-click="rebootDevice()">Reboot Device</button>
+								</td>
+								<td></td>
+							</tr>
 				    	</table>
 
 				    </div>
