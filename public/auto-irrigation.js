@@ -56,7 +56,8 @@ var self = module.exports = {
 		client.messages.create({
 		    body: 'Your Plant just got irrigated.',
 		    to: '+17543669331',  // Text this number
-		    from: '+18134131741' // From a valid Twilio number
+		    from: '+18134131741', // From a valid Twilio number
+		    media: __dirname + '/public/img/office-plant.jpg'
 		}, function(err, message) {
 
 		    console.log('Message Sent: ' + message.sid)
