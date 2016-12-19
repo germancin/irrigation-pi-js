@@ -59,7 +59,7 @@ app.get('/notification/:options', function(req, res) {
 
 	console.log('HIT NODE GET notifications', req.params.options);
 
-	var tt = notification.sendMMS(req.params.options)
+	var tt = notification.sendMMS(req.params.options, res)
 	res.send(JSON.stringify({ resp: true }));
 
 
