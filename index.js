@@ -55,17 +55,13 @@ app.get('/state/:state', function(req, res) {
 	
 });
 
-app.get('/notification/:options', function(req, res) {
+app.get('/notification', function(req, res) {
 
-	console.log('HIT NODE GET notifications', req.params.options);
+	console.log('HIT NODE GET notifications', req);
 
 	//notification.sendMMS(req.params.options);
 
-	var array = $.map(req.params.options, function(value, index) {
 
-		console.log([value]);
-	    return [value];
-	});
 
 	res.send(JSON.stringify({ sent: true }));
 
