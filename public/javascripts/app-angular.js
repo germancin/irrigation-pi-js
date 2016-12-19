@@ -126,8 +126,8 @@ app.service('notificationService', function(notificationFactory) {
 
             console.log('going to semd the request to the notificationFactory... to send MMS');
 
-            var params = {
-                'arguments': [{
+            var arg = {
+                'params': [{
                     'from': '12323',
                     'to': '77777',
                     'msg': 'this is my message',
@@ -147,7 +147,7 @@ app.service('notificationService', function(notificationFactory) {
 
 // ::::::::::::::: FACTORIES :::::::::::::::
 app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/:arguments", {arguments: '@params'}, {
+    return $resource("/notification/:params", {params: '@params'}, {
         sendMessage: {
             method: 'GET'
         }
