@@ -8,13 +8,13 @@ var authToken = '7b1c09ae1c0c491f2b0dead446766d06';
 
 var self = module.exports = {
 
-	sendMMS: function (from to msg) {
+	sendMMS: function () {
 
 		console.log('::Sending Confirmation Message::');
 		var client = new twilio.RestClient(accountSid, authToken);
 
 		client.messages.create({
-		    body: 'Your Plant just got irrigated.',
+		    body: 'Hola esto son buas notificaas',
 		    to: '+17543669331',  // Text this number
 		    from: '+18134131741', // From a valid Twilio number
 		    media: __dirname + '/public/img/office-plant.jpg'

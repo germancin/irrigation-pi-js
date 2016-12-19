@@ -2,6 +2,7 @@ var express = require('express');
 var gpio = require('rpi-gpio');
 var path = require('path');
 var app = express();
+var notification = require(__dirname + '/public/modules/notification.js');
 var pin = 16;
 var port = process.env.PORT || 80;
 
@@ -57,7 +58,8 @@ app.get('/state/:state', function(req, res) {
 app.get('/notification/:options', function(req, res) {
 
 
-	console.log('notifications nodejs', req.params);
+	console.log('notifications nodejs', req.params.options);
+	notification.sendMMS();
 	return;
 
 });
