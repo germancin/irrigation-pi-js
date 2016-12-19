@@ -48,7 +48,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
         console.log('got into testImage');
         notificationService.sendMMS().$promise.then(function(response) {
 
-            console.log('llego notification response: ');
+            console.log('llego notification response: ' ,response);
 
         });
 
@@ -124,7 +124,7 @@ app.service('notificationService', function(notificationFactory) {
 
             var params = {
                 'options':[{
-                    
+
                     'from': '123123123',
                     'to': '12341233',
                     'msg': 'this si my message'
@@ -133,7 +133,6 @@ app.service('notificationService', function(notificationFactory) {
 
             var response =  notificationFactory.sendMessage(params);
 
-            console.log(response);
             return response
 
         },

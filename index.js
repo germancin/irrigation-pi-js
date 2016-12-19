@@ -65,8 +65,7 @@ app.get('/notification/:options', function(req, res) {
 			console.log('mensaje.......', res);
 	});
 
-	console.log('mires....res', res);
-	return;
+	return res;
 
 });
 
