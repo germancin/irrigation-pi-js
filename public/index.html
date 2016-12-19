@@ -23,14 +23,25 @@
 			  <div class="row">
 				    <div class="col-sm-3 col-md-3"> </div>
 				    <div class="col-sm-4 col-md-4">
-				    	<span>Switch Irrigator</span>
-						<button ng-click="setState('on')" >ON</button>
-						<button ng-click="setState('off')">OFF</button>
-						<div>Status {{status}}</div>
-						<p></p>
-						<span>Test Image</span> 
-						<button ng-click="testImage()">Take Picture</button>
-						<div ng-if="showImage" ng-init="showImage = false"> show image preview </div>
+
+				    	<table class="table">
+				    		<tr>
+				    			<td>Switch Irrigator: </td>
+				    			<td><button ng-click="setState('on')" >ON</button>
+									<button ng-click="setState('off')">OFF</button>
+								</td>
+				    			<td>Status {{status}}</td>
+				    		</tr>
+
+				    		<tr>
+				    			<td>Test Image: </td>
+				    			<td>
+				    				<button ng-click="testImage()">Take Picture</button>
+								</td>
+				    			<td><div ng-if="showImage" ng-init="showImage = false"> show image preview </div></td>
+				    		</tr>
+				    	</table>
+
 				    </div>
 				    <div class="col-sm-3 col-md-3"> </div>
 			  </div>
