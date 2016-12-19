@@ -1,13 +1,14 @@
 .bash_logout
-.gitignore
 .viminfo
 .ssh
 .bash_history
 .bashrc
 .gitconfig
+.profile
+setup.sh
+reboot-device.sh
 git-pull-repository.sh
 git-sshkey-setup.sh
-reboot-device.sh
-setup.sh
-.profile
+
+
 
