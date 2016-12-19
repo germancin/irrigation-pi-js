@@ -57,9 +57,9 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification', function(req, res) {
 
-	notification.sendImageMsg(req.query, function (resp) {
+	notification.sendImageMsg(req.query, function (callback) {
 
-		console.log('e donde vamos', resp);
+		console.log('e donde vamos', callback);
 
 	});
 
