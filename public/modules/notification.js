@@ -12,6 +12,8 @@ var self = module.exports = {
 
 		var client = new twilio.RestClient(accountSid, authToken);
 
+		console.log(options);
+		
 		client.messages.create({
 
 		    to: '+17543669331',  // Text this number
