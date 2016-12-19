@@ -57,7 +57,7 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification', function(req, res) {
 
-	notification.sendMMS(req.query, function (err) {
+	notification.sendImageMsg(req.query, function (err) {
 
 		console.log('e donde vamos');
 		

@@ -8,7 +8,7 @@ var authToken = '7b1c09ae1c0c491f2b0dead446766d06';
 
 var self = module.exports = {
 
-	sendMMS: function (options) {
+	sendImageMsg: function (options) {
 
 		var client = new twilio.RestClient(accountSid, authToken);
 
