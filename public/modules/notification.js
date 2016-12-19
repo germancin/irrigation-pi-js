@@ -13,8 +13,8 @@ var self = module.exports = {
 		var client = new twilio.RestClient(accountSid, authToken);
 		var twiml = new twilio.TwimlResponse();
 
-		client.messages.create({
-			body: 'Hola esto son buas notificaas',
+		twiml.messages.create({
+			body: 'Este mensaje es con img',
 		    to: '+17543669331',  // Text this number
 		    from: '+18134131741', // From a valid Twilio number
 		    uri: 'http://192.168.0.111/img/office-plant.jpg'
