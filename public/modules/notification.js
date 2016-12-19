@@ -16,7 +16,7 @@ var self = module.exports = {
 		    body: 'Sending message with picure',
 		    to: '+17543669331',  // Text this number
 		    from: '+18134131741', // From a valid Twilio number
-		    mediaUrl: "http://192.168.0.111/img/office-plant.jpg"
+		    mediaUrl: "https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg"
 		}, function(err, message) {
 
 		    if(err) {
