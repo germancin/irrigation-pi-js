@@ -147,7 +147,7 @@ app.service('notificationService', function(notificationFactory) {
 
 // ::::::::::::::: FACTORIES :::::::::::::::
 app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/:arguments", {params: '@params'}, {
+    return $resource("/notification/:arguments", {arguments: '@params'}, {
         sendMessage: {
             method: 'GET'
         }
