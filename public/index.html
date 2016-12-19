@@ -21,14 +21,14 @@
 
 		<div class="container">
 			  <div class="row">
-				    <div class="col-sm-1 col-md-1"> </div>
+				    <div class="col-sm-2 col-md-2"> </div>
 				    <div>
 
 				    	<table class="table table-striped">
 				    		<tr>
 				    			<td>Switch Irrigator: </td>
-				    			<td><button ng-click="setState('on')" >ON</button>
-									<button ng-click="setState('off')">OFF</button>
+				    			<td><button class="button"  ng-click="setState('on')" >ON</button>
+									<button class="button"  ng-click="setState('off')">OFF</button>
 								</td>
 				    			<td>Status {{status}}</td>
 				    		</tr>
@@ -36,14 +36,22 @@
 				    		<tr>
 				    			<td>Test Image: </td>
 				    			<td>
-				    				<button ng-click="testImage()">Take Picture</button>
+				    				<button class="button"  ng-click="testImage()">Take Picture</button>
+								</td>
+				    			<td><div ng-if="showImage" ng-init="showImage = false"> show image preview </div></td>
+				    		</tr>
+
+				    		<tr>
+				    			<td>Reboot Device: </td>
+				    			<td>
+				    				<button class="button" ng-click="rebootDevice()">Reboot</button>
 								</td>
 				    			<td><div ng-if="showImage" ng-init="showImage = false"> show image preview </div></td>
 				    		</tr>
 				    	</table>
 
 				    </div>
-				    <div class="col-sm-1 col-md-1"> </div>
+				    <div class="col-sm-2 col-md-2"> </div>
 			  </div>
 		</div>
 		
