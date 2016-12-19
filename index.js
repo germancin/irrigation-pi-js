@@ -59,15 +59,11 @@ app.get('/notification/:options', function(req, res) {
 
 	console.log('HIT NODE GET notifications', req.params.options);
 
-	notification.sendMMS(req.params.options);
-
-	//console.log(res);
-	//var twilio = require('twilio');
-	//res.send(JSON.stringify({ resp: true }));
+	//notification.sendMMS(req.params.options);
 
 
+	res.send(JSON.stringify({ sent: true, carr:req.params.options }));
 
-	
 
 });
 
