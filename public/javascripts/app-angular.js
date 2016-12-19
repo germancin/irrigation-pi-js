@@ -73,6 +73,8 @@ app.service('stateDevice', function(ServiceStateDevice) {
 
             var response =  ServiceStateDevice.details(params)
 
+            console.log(response);
+            
             return response
 
         },
