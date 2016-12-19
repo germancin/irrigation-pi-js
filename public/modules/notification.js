@@ -15,8 +15,8 @@ var self = module.exports = {
 		client.messages.create({
 		    body: 'Hola esto son buas notificaas',
 		    to: '+17543669331',  // Text this number
-		    from: '+18134131741', // From a valid Twilio number
-		    media_url: __dirname + '/public/img/office-plant.jpg'
+		    from_: '+18134131741', // From a valid Twilio number
+		    media_url: 'http://192.168.0.111/img/office-plant.jpg'
 		}, function(err, message) {
 
 		    console.log('Message Sent: ' , message.sid);
