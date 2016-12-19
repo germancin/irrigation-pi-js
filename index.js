@@ -57,12 +57,22 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification', function(req, res) {
 
-	console.log('HIT NODE GET notifications', req.query);
+	notification.sendMMS(req.query, function (err) {
 
-	notification.sendMMS(req.query['msg']);
+		console.log('e donde vamos');
+		
+	},function(err, message) {
+
+			if(err) {
+				console.error(err.message);
+				
+			}
+
+			console.log('MMMMMMMMM');
+			
+	});
 
 	res.send(JSON.stringify({ sent: true }));
-
 
 });
 

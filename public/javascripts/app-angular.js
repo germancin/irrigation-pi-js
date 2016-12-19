@@ -5,6 +5,7 @@ var app = angular.module('App', ['ngResource']);
 app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'notificationService', function($scope, stateDevice, rebootService, notificationService) {
 
     $scope.status = false;
+    $scope.mesgSent = false;
 
 	$scope.setState = function(state){
 
@@ -43,12 +44,13 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
 
     };
 
-    $scope.sendMMSImage = function(){
+    $scope.sendMsgImage = function(){
 
         console.log('got into testImage');
-        notificationService.sendMMS().$promise.then(function(response) {
+        notificationService.sendMsgImage().$promise.then(function(response) {
 
             console.log('llego notification response: ' ,response);
+            $scope.mesgSent = true;
 
         });
 
@@ -118,14 +120,14 @@ app.service('notificationService', function(notificationFactory) {
 
     var self = {
 
-        'sendMMS': function(options){
+        'sendMsgImage': function(options){
 
             console.log('going to semd the request to the notificationFactory... to send MMS1');
 
             var params = {
                 'from': '123123123', //will be dynamic
                 'to': '12341233', //will be dynamic
-                'msg': 'options.msg'
+                'msg': options['msg']
             };
 
             var response =  notificationFactory.sendMessage(params);
