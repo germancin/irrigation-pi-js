@@ -59,12 +59,7 @@ app.get('/notification/:options', function(req, res) {
 
 	console.log('HIT NODE GET notifications', req.params.options[0]);
 
-	notification.sendMMS(req.params.options).then(function (result){
-
-		console.log('qui esta tu caramelo', result)
-      	//return res.json(result)
-
-    });
+	notification.sendMMS(req.params.options);
 
 	//var twilio = require('twilio');
 	//res.send(JSON.stringify({ resp: true }));
