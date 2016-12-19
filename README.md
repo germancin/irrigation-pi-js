@@ -138,6 +138,11 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 #### At the end of the file add 
 ``` sudo node /home/pi/index.js```
 
+##### Make sure to change the permissions back to the rc.local 
+##### so is always an executable type of file.
+``` sudo chmod u+x /etc/rc.local```
+
+### Note: Add commands below the comment, but leave the line exit 0 at the end, then save the file and exit.
 ![alt text](http://content.screencast.com/users/germancin/folders/Jing/media/5bce8140-43f4-4a21-bda7-f76eebeb8149/00000203.png "line at the end of the rc.local")
 
 
