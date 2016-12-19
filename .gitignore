@@ -1,5 +1,10 @@
 .bash_logout
+.gitignore
+.viminfo
+.ssh
+.bash_history
 .bashrc
+.gitconfig
 git-pull-repository.sh
 git-sshkey-setup.sh
 setup.sh
