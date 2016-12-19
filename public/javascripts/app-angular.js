@@ -125,7 +125,7 @@ app.service('notificationService', function(notificationFactory) {
             var params = {
                 'from': '123123123', //will be dynamic
                 'to': '12341233', //will be dynamic
-                'msg': options.msg
+                'msg': 'options.msg'
             };
 
             var response =  notificationFactory.sendMessage(params);
