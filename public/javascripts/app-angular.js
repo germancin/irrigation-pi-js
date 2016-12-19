@@ -2,7 +2,7 @@ var app = angular.module('App', ['ngResource']);
 
 //angular.module('App').controller('MainController', ctrlFunc);
 
-app.controller('MainController', ['$scope','stateDevice', 'rebootService', function($scope, stateDevice, rebootService) {
+app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'notificationService', function($scope, stateDevice, rebootService, notificationService) {
 
     $scope.status = false;
 
@@ -40,6 +40,11 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', funct
     $scope.sendMMSImage = function(){
 
         console.log('got into testImage');
+        notificationService.sendMMS().$promise.then(function(response) {
+
+            console.log('llego notification response: ' , response);
+
+        });
         $scope.showImage = true;
 
     };
@@ -114,13 +119,12 @@ app.service('notificationService', function(notificationFactory) {
         'sendMMS': function(){
 
             console.log('going to semd the request to the notificationFactory... to send MMS');
-            self.reboot = true;
 
             var params = {
                 'arguments': [{
                     'from': '12323',
-                    'to': '77777'
-                    'msg': 'this is my message'
+                    'to': '77777',
+                    'msg': 'this is my message',
                 }]
             };
 
