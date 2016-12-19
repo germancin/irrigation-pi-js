@@ -11,24 +11,24 @@ var self = module.exports = {
 	sendMMS: function (options) {
 
 		var client = new twilio.RestClient(accountSid, authToken);
+		console.log('aqui esto', options);
+		// client.messages.create({
 
-		client.messages.create({
+		//     to: '+17543669331',  // Text this number. options['to']
+		//     from: '+18134131741', // From a valid Twilio number .options['from']
+		//     body: options['msg'],
+		//     mediaUrl: "https://s-media-cache-ak0.pinimg.com/236x/e1/9a/72/e19a722a96542551e4cc68ce079baace.jpg"
 
-		    to: '+17543669331',  // Text this number. options['to']
-		    from: '+18134131741', // From a valid Twilio number .options['from']
-		    body: options['msg'],
-		    mediaUrl: "https://s-media-cache-ak0.pinimg.com/236x/e1/9a/72/e19a722a96542551e4cc68ce079baace.jpg"
+		// }, function(err, message) {
 
-		}, function(err, message) {
+		// 	if(err) {
+		// 		console.error(err.message);
+		// 		return false;
+		// 	}
 
-			if(err) {
-				console.error(err.message);
-				return false;
-			}
-
-			console.log('Message Sent: ' , message.id);
-			return true;
-		})
+		// 	console.log('Message Sent: ' , message.id);
+		// 	return true;
+		// })
 
 	}
 };
