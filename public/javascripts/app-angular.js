@@ -126,7 +126,7 @@ app.service('notificationService', function(notificationFactory) {
 
             console.log('going to semd the request to the notificationFactory... to send MMS');
 
-            var arg = {
+            var params = {
                 'params': [{
                     'from': '12323',
                     'to': '77777',
@@ -134,7 +134,7 @@ app.service('notificationService', function(notificationFactory) {
                 }]
             };
 
-            var response =  notificationFactory.sendMessage(params);
+            var response =  notificationFactory.sendMessage(arg);
 
             return response
 
