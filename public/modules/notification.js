@@ -8,9 +8,9 @@ var authToken = '7b1c09ae1c0c491f2b0dead446766d06';
 
 var self = module.exports = {
 
-	sendMMS: function () {
+	sendMMS: function (options) {
 
-		console.log('::Sending Confirmation Message::');
+		console.log('::Sending Confirmation Message::', options);
 		var client = new twilio.RestClient(accountSid, authToken);
 
 		client.messages.create({
@@ -21,6 +21,8 @@ var self = module.exports = {
 		}, function(err, message) {
 
 		    console.log('Message Sent: ' + message.sid);
+
+		    return JSON.stringify({ response: true });
 
 		})
 

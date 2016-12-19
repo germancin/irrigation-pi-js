@@ -59,7 +59,12 @@ app.get('/notification/:options', function(req, res) {
 
 
 	console.log('notifications nodejs', req.params.options);
-	notification.sendMMS();
+
+	notification.sendMMS(req.params.options, function(err) {
+
+			console.log('mensaje.......', err);
+	});
+
 	return;
 
 });
