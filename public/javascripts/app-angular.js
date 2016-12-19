@@ -124,19 +124,16 @@ app.service('notificationService', function(notificationFactory) {
 
         'sendMMS': function(){
 
-            console.log('going to semd the request to the notificationFactory... to send MMS');
+            console.log('going to semd the request to the notificationFactory... to send MMS1');
 
             var arg = {
-                'params': [{
-                    'from': '12323',
-                    'to': '77777',
-                    'msg': 'this is my message',
-                }]
+                'var': 'micontevar'
             };
 
             var response =  notificationFactory.sendMessage(arg);
 
-            return response
+            console.log(response);
+            //return response
 
         },
 
@@ -147,7 +144,7 @@ app.service('notificationService', function(notificationFactory) {
 
 // ::::::::::::::: FACTORIES :::::::::::::::
 app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/:params", {params: '@params'}, {
+    return $resource("/notification/:var", {params: '@var'}, {
         sendMessage: {
             method: 'GET'
         }
