@@ -134,7 +134,7 @@ app.service('notificationService', function(notificationFactory) {
                 }]
             };
 
-            var response =  notificationFactory.sendMessage(arg);
+            var response =  notificationFactory.sendMessage(params);
 
             return response
 
