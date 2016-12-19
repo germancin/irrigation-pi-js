@@ -17,8 +17,8 @@ app.get('/', function(req, res) {
 
 app.get('/state/:state', function(req, res) {
 
+		console.log('resp', req);
 
-		
 		if(req.params.state === 'on') {
 
 			console.log('ON');
