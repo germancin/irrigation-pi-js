@@ -118,14 +118,14 @@ app.service('notificationService', function(notificationFactory) {
 
     var self = {
 
-        'sendMMS': function(){
+        'sendMMS': function(options){
 
             console.log('going to semd the request to the notificationFactory... to send MMS1');
 
             var params = {
-                'from': '123123123',
-                'to': '12341233',
-                'msg': 'this si my message'
+                'from': '123123123', //will be dynamic
+                'to': '12341233', //will be dynamic
+                'msg': options.msg
             };
 
             var response =  notificationFactory.sendMessage(params);
