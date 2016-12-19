@@ -28,9 +28,10 @@ var self = module.exports = {
 				callback(resp);
 			}
 
+			console.log('Message Sent');
 			resp.push({sent:true});
-			console.log('Message Sent: ' , message.id);
 			callback(resp);
+			
 		})
 
 	}
