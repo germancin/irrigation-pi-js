@@ -59,7 +59,7 @@ app.get('/notification', function(req, res) {
 
 	console.log('HIT NODE GET notifications', req.query);
 
-	notification.sendMMS(req.query);
+	notification.sendMMS(req.query['msg']);
 
 	res.send(JSON.stringify({ sent: true }));
 
