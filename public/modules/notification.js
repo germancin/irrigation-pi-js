@@ -8,7 +8,7 @@ var authToken = '7b1c09ae1c0c491f2b0dead446766d06';
 
 var self = module.exports = {
 
-	sendImageMsg: function (options) {
+	sendImageMsg: function (options, callback) {
 
 		var resp = [];
 		var client = new twilio.RestClient(accountSid, authToken);
@@ -27,6 +27,7 @@ var self = module.exports = {
 				resp.push({sent:false});
 				callback(resp);
 			}
+
 			resp.push({sent:true});
 			console.log('Message Sent: ' , message.id);
 			callback(resp);
