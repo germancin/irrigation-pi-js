@@ -5,12 +5,11 @@ var pin = 16;
 var delay = 5000;
 var timeZone = 'America/New_York';
 
-
 var self = module.exports = {
 
 	setCron: function () {
 
-		console.log('====Watering Plant - Powered by: RASPBERRY PI====');
+		console.log('::::: Watering Plant ::: Powered by: RASPBERRY PI :::::');
 
 		// form left to right 
 		// [00=>seconds, 51=>minutes, 13=>militarHrs, *, *, 0=>sunday]
@@ -38,7 +37,7 @@ var self = module.exports = {
 	},
 	turnOff: function() {
 
-		console.log(':::The Irrigation is About To Finish::: ');
+		console.log(':::The Irrigation is About To Finish:::');
 		gpio.write(pin, 0, function(err) {
 			if (err) throw err
 			self.sendMessage()
