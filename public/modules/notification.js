@@ -10,6 +10,7 @@ var self = module.exports = {
 
 	sendImageMsg: function (options) {
 
+		var resp = [];
 		var client = new twilio.RestClient(accountSid, authToken);
 
 		client.messages.create({
@@ -23,11 +24,12 @@ var self = module.exports = {
 
 			if(err) {
 				console.error(err.message);
-				callback(false);
+				resp.push({sent:false});
+				callback(resp);
 			}
-
+			resp.push({sent:true});
 			console.log('Message Sent: ' , message.id);
-			callback(true);
+			callback(resp);
 		})
 
 	}
