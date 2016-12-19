@@ -48,15 +48,13 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
         console.log('got into testImage');
         notificationService.sendMMS().$promise.then(function(response) {
 
-            console.log('llego notification response: ' , response);
+            console.log('llego notification response: ');
 
         });
 
     };
 
 }]);
-
-
 
 app.service('stateDevice', function(ServiceStateDevice) {
 	
@@ -91,7 +89,6 @@ app.service('stateDevice', function(ServiceStateDevice) {
     return self;
 });
 
-
 app.service('rebootService', function(rebootFactory) {
 
     var self = {
@@ -125,11 +122,11 @@ app.service('notificationService', function(notificationFactory) {
 
             console.log('going to semd the request to the notificationFactory... to send MMS1');
 
-            var arg = {
+            var params = {
                 'options': 'micontevar'
             };
 
-            var response =  notificationFactory.sendMessage(arg);
+            var response =  notificationFactory.sendMessage(params);
 
             console.log(response);
             return response
@@ -143,7 +140,7 @@ app.service('notificationService', function(notificationFactory) {
 
 // ::::::::::::::: FACTORIES :::::::::::::::
 app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/:options", {params: '@options'}, {
+    return $resource("/notification/:options", {oprtions: '@options'}, {
         sendMessage: {
             method: 'GET'
         }
