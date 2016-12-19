@@ -20,7 +20,8 @@ var self = module.exports = {
 		    media: __dirname + '/public/img/office-plant.jpg'
 		}, function(err, message) {
 
-		    console.log('Message Sent: ' + message.sid);
+		    console.log('Message Sent: ' , message.sid);
+		    console.log('errors ', err);
 		    return true;
 
 		})
