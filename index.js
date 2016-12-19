@@ -59,7 +59,7 @@ app.get('/notification', function(req, res) {
 
 	notification.sendImageMsg(req.query, function (callback) {
 
-		console.log('callback', callback['sent']);
+		console.log('callback:', callback[0].sent);
 
 	});
 

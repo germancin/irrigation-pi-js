@@ -31,7 +31,7 @@ var self = module.exports = {
 			console.log('Message Sent');
 			resp.push({sent:true});
 			callback(resp);
-			
+
 		})
 
 	}
