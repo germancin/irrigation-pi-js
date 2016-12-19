@@ -26,9 +26,10 @@
 				    	<span>Switch Irrigator</span>
 						<button ng-click="setState('on')" >ON</button>
 						<button ng-click="setState('off')">OFF</button>
+						<div>Status {{status}}</div>
 						<p></p>
-						<span>Test Image<hr></span>
-						<button ng-click="testImage()">ON</button>
+						<span>Test Image</span> 
+						<button ng-click="testImage()">Take Picture</button>
 						<div ng-if="showImage" ng-init="showImage = false"> show image preview </div>
 				    </div>
 				    <div class="col-sm-3 col-md-3"> </div>

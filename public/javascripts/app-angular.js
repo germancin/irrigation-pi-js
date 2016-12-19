@@ -4,13 +4,16 @@ var app = angular.module('App', ['ngResource']);
 
 app.controller('MainController', ['$scope','stateDevice', function($scope, stateDevice) {
 
+    $scope.status = false;
+
 	$scope.setState = function(state){
 
 		if (state === 'on'){
 		 	//turn on the led
 		 	stateDevice.on().$promise.then(function(response) {
 
-		 		console.log('Promise State: ON')
+		 		console.log('Promise State: ON');
+                $scope.status = true;
 
 			});
 
@@ -18,7 +21,8 @@ app.controller('MainController', ['$scope','stateDevice', function($scope, state
 		 	//turnoff the led
 		 	stateDevice.off().$promise.then(function(response) {
 
-		 		console.log('Promise State: OFF')
+		 		console.log('Promise State: OFF');
+                $scope.status = false;
 
 			});
 		}
