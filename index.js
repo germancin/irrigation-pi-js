@@ -17,6 +17,7 @@ app.get('/', function(req, res) {
 
 app.get('/state/:state', function(req, res) {
 
+	console.log(req);
 		if(req.params.state === 'on') {
 
 			console.log('ON');
@@ -56,7 +57,8 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification/:options', function(req, res) {
 
-	console.log('notifications nodejs');
+
+	console.log('notifications nodejs', req.params.options);
 	return;
 
 });
