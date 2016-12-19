@@ -37,6 +37,12 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
 
     };
 
+    $scope.takePicture = function () {
+
+        $scope.showImage = true;
+        
+    };
+
     $scope.sendMMSImage = function(){
 
         console.log('got into testImage');
@@ -45,7 +51,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
             console.log('llego notification response: ' , response);
 
         });
-        $scope.showImage = true;
+        
 
     };
 
