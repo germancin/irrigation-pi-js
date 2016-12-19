@@ -61,7 +61,11 @@ app.get('/notification/:options', function(req, res) {
 
 	//notification.sendMMS(req.params.options);
 
-	console.log(req.params.options)
+	var array = $.map(myObj, function(value, index) {
+
+		console.log([value]);
+	    return [value];
+	});
 
 	res.send(JSON.stringify({ sent: true }));
 
