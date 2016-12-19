@@ -33,12 +33,14 @@ app.controller('MainController', ['$scope','stateDevice', function($scope, state
 
         console.log(' Reboot Device ');
 
+
+
     };
 
     $scope.testImage = function(){
         console.log('got into testImage');
         $scope.showImage = true;
-        
+
     };
 
 }]);
@@ -78,9 +80,46 @@ app.service('stateDevice', function(ServiceStateDevice) {
     return self;
 });
 
+
+app.service('rebootService', function(rebootFactory) {
+
+    var self = {
+
+        'reboot' : false,
+        'rebootDevice': function(){
+
+            console.log('rebooting device now...');
+            self.reboot = true;
+
+            var params = {
+                'reboot': self.reboot,
+            };
+
+            var response =  rebootFactory.rebootDev(params);
+
+            return response
+
+        },
+
+    }
+
+    return self;
+});
+
+
+
+
 app.factory('ServiceStateDevice', ['$resource', function($resource) {
     return $resource("/state/:state", {state: '@state'}, {
         details: {
+            method: 'GET'
+        }
+    });
+}]);
+
+app.factory('rebootFactory', ['$resource', function($resource) {
+    return $resource("/reboot/", {reboot: '@reboot'}, {
+        rebootDev: {
             method: 'GET'
         }
     });

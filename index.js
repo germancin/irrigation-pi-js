@@ -54,6 +54,18 @@ app.get('/state/:state', function(req, res) {
 	
 });
 
+app.get('/reboot/', function(req, res) {
+
+	if(req.params.reboot) {
+
+		//reboot the device
+		console.log('rebiiting');
+		
+
+	}
+
+});
+
 console.log('Listening Port...' + port);
 app.listen(port);
 
