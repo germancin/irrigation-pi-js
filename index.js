@@ -59,15 +59,10 @@ app.get('/notification/:options', function(req, res) {
 
 	console.log('notifications nodejs', req.params.options);
 
-	if( notification.sendMMS(req.params.options) ){
+	var tt = notification.sendMMS(req.params.options)
+	res.send(JSON.stringify({ sent: true }));
 
-		res.send(JSON.stringify({ sent: true }));
 
-	}else{
-
-		res.send(JSON.stringify({ sent: false }));
-
-	}
 
 	
 
