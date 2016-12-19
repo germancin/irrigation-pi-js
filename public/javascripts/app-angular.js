@@ -29,6 +29,12 @@ app.controller('MainController', ['$scope','stateDevice', function($scope, state
 
 	};
 
+    $scope.rebootDevice = function () {
+
+        console.log(' Reboot Device ');
+
+    };
+
     $scope.testImage = function(){
         console.log('got into testImage');
         $scope.showImage = true;
