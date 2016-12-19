@@ -2,7 +2,7 @@ var app = angular.module('App', ['ngResource']);
 
 //angular.module('App').controller('MainController', ctrlFunc);
 
-app.controller('MainController', ['$scope','stateDevice', function($scope, stateDevice) {
+app.controller('MainController', ['$scope','stateDevice', 'rebootService', function($scope, stateDevice, rebootService) {
 
     $scope.status = false;
 
@@ -33,7 +33,7 @@ app.controller('MainController', ['$scope','stateDevice', function($scope, state
 
         console.log(' Reboot Device ');
 
-
+        rebootService.rebootDevice();
 
     };
 
