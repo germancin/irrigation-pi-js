@@ -13,7 +13,7 @@ var self = module.exports = {
 
 		// form left to right 
 		// [00=>seconds, 51=>minutes, 13=>militarHrs, *, *, 0=>sunday]
-		new cron('00 36 11 * * 0', function() {
+		new cron('00 37 11 * * 0', function() {
 
 			console.log('Start Watering Plant.');
 			self.wateringPlant();
