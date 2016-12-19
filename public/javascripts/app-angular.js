@@ -127,13 +127,13 @@ app.service('notificationService', function(notificationFactory) {
             console.log('going to semd the request to the notificationFactory... to send MMS1');
 
             var arg = {
-                'var': 'micontevar'
+                'options': 'micontevar'
             };
 
             var response =  notificationFactory.sendMessage(arg);
 
             console.log(response);
-            //return response
+            return response
 
         },
 
@@ -144,7 +144,7 @@ app.service('notificationService', function(notificationFactory) {
 
 // ::::::::::::::: FACTORIES :::::::::::::::
 app.factory('notificationFactory', ['$resource', function($resource) {
-    return $resource("/notification/", {params: '@var'}, {
+    return $resource("/notification/:options", {params: '@options'}, {
         sendMessage: {
             method: 'GET'
         }

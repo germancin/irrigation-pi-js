@@ -54,10 +54,10 @@ app.get('/state/:state', function(req, res) {
 	
 });
 
-app.get('/notification/', function(req, res) {
+app.get('/notification/:options', function(req, res) {
 
-	console.log('im in the notification endpoint');
-	return ['respuestaaaa'];
+	console.log('notifications nodejs');
+	return;
 
 });
 
