@@ -57,9 +57,9 @@ app.get('/state/:state', function(req, res) {
 
 app.get('/notification', function(req, res) {
 
-	console.log('HIT NODE GET notifications', req);
+	console.log('HIT NODE GET notifications', req.query);
 
-	//notification.sendMMS(req.params.options);
+	//notification.sendMMS(req.query);
 
 
 
