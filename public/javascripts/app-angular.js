@@ -25,6 +25,11 @@ app.controller('MainController', ['$scope','stateDevice', function($scope, state
 
 	};
 
+    $scope.testImage = function(){
+        console.log('got into testImage');
+        $scope.showImage = true;
+    };
+
 }]);
 
 

@@ -20,18 +20,19 @@
 	<body ng-controller="MainController as vm">
 
 		<div class="container">
-		  <div class="row">
-		    <div class="col-sm-3">
-		      
-		    </div>
-		    <div class="col-sm-5">
-				<button ng-click="setState('on')" >ON</button>
-				<button ng-click="setState('off')">OFF</button>
-		    </div>
-		    <div class="col-sm-3">
-		      
-		    </div>
-		  </div>
+			  <div class="row">
+				    <div class="col-sm-3"> </div>
+				    <div class="col-sm-4">
+				    	<span>Switch Irrigator</span><hr>
+						<button ng-click="setState('on')" >ON</button>
+						<button ng-click="setState('off')">OFF</button>
+						<p></p>
+						<span>Test Image</span><hr>
+						<button ng-click="testImage()" >ON</button>
+						<div ng-if="showImage" ng-init="showImage = false"> show image preview </div>
+				    </div>
+				    <div class="col-sm-3"> </div>
+			  </div>
 		</div>
 		
 		
