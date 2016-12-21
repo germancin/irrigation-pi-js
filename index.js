@@ -71,12 +71,10 @@ app.get('/reboot/', function(req, res) {
 
 	console.log('llego al nodejs express', req);
 
-	
-
 	if(req.query.reboot === 'true') {
 
 		var file = __dirname + '/public/cmds/reboot-device.sh';
-		
+
 		exec(file, function(error, stdout, stderr) {
 
 		    // command output is in stdout
