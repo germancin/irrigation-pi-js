@@ -67,7 +67,7 @@ app.get('/notification', function(req, res) {
 
 });
 
-app.get('/reboot/:reboot', function(req, res) {
+app.get('/reboot/', function(req, res) {
 
 	console.log('llego al nodejs express', req);
 
