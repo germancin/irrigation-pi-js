@@ -98,7 +98,7 @@ app.service('rebootService', function(rebootFactory) {
         'rebootDevice': function(){
 
             console.log('rebooting device now...');
-            self.reboot = true;
+            self.reboot = 'true';
 
             var params = {
                 'reboot': self.reboot,
@@ -160,7 +160,7 @@ app.factory('ServiceStateDevice', ['$resource', function($resource) {
 app.factory('rebootFactory', ['$resource', function($resource) {
     return $resource("/reboot/:reboot", {reboot: '@reboot'}, {
         rebootDev: {
-            method: 'POST'
+            method: 'GET'
         }
     });
 }]);
