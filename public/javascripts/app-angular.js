@@ -33,6 +33,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
 
         console.log(' Reboot Device ');
 
+        $scope.rebooting = true;
         rebootService.rebootDevice();
 
     };
@@ -158,7 +159,7 @@ app.factory('ServiceStateDevice', ['$resource', function($resource) {
 }]);
 
 app.factory('rebootFactory', ['$resource', function($resource) {
-    return $resource("/reboot/:reboot", {reboot: '@reboot'}, {
+    return $resource("/reboot/", {action: '@reboot'}, {
         rebootDev: {
             method: 'GET'
         }

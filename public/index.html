@@ -64,6 +64,9 @@
 								<td>Reboot Device: </td>
 								<td>
 									<button class="button" ng-click="rebootDevice()">Reboot Device</button>
+									<div ng-if="rebooting">
+										Rebooting...
+									</div>
 								</td>
 								<td></td>
 							</tr>
