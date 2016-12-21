@@ -6,7 +6,6 @@
 .gitconfig
 .profile
 setup.sh
-reboot-device.sh
 git-pull-repository.sh
 git-sshkey-setup.sh
 push.sh

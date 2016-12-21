@@ -70,19 +70,18 @@ app.get('/notification', function(req, res) {
 app.get('/reboot', function(req, res) {
 
 	console.log('llego al nodejs express');
-	console.log(res);
+
 	var file = __dirname + '/public/cmds/reboot-device.sh';
 
-	if(req.query.reboot === 'true') {
-
-		//reboot the device
-		console.log('rebiiting');
-
+	if(req.query.reboot) {
 
 		var cmd = execFile;
 
 		exec(file, function(error, stdout, stderr) {
-		  // command output is in stdout
+
+		    // command output is in stdout
+		  	console.log(error, stdout, stderr);
+
 		});
 
 
