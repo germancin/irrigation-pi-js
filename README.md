@@ -7,16 +7,16 @@
 #### Flash the memory of the raspberry : https://www.udemy.com/rpi-full-stack/learn/v4/t/lecture/3109460?start=555
 #### Get into the raspberry / ssh pi@192.168.1.149
 #### Password: raspberry
-``` wget http://german-cv.com/irrigation/setup.sh && wget http://german-cv.com/irrigation/git-pull-repository.sh && wget http://german-cv.com/irrigation/git-sshkey-setup.sh```
+1. ``` wget http://german-cv.com/irrigation/setup.sh && wget http://german-cv.com/irrigation/git-pull-repository.sh && wget http://german-cv.com/irrigation/git-sshkey-setup.sh```
 
 ##### Then run in this order
 ```
 
- 1. sh setup.sh
+ 2. sh setup.sh
 
- 2. sh git-sshkey-setup.sh
+ 3. sh git-sshkey-setup.sh
 
- 3. sh git-pull-repository.sh
+ 4. sh git-pull-repository.sh
 
 ```
 
