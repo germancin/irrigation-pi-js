@@ -2,6 +2,7 @@ var express = require('express');
 var gpio = require('rpi-gpio');
 var path = require('path');
 var app = express();
+var exec = require('child_process').execFile;
 var notification = require(__dirname + '/public/modules/notification.js');
 var pin = 16;
 var port = process.env.PORT || 80;
@@ -70,11 +71,19 @@ app.get('/reboot', function(req, res) {
 
 	console.log('llego al nodejs express');
 	console.log(res);
+	var file = __dirname + '/public/cmds/reboot-device.sh';
 
 	if(req.query.reboot === 'true') {
 
 		//reboot the device
 		console.log('rebiiting');
+
+
+		var cmd = execFile;
+
+		exec(file, function(error, stdout, stderr) {
+		  // command output is in stdout
+		});
 
 
 	}
