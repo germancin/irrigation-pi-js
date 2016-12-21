@@ -5,7 +5,6 @@ var app = angular.module('App', ['ngResource']);
 app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'notificationService', function($scope, stateDevice, rebootService, notificationService) {
 
     $scope.status = false;
-    $scope.mesgSent = false;
 
 	$scope.setState = function(state){
 
@@ -50,7 +49,7 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
         notificationService.sendMsgImage().$promise.then(function(response) {
 
             console.log('llego notification response: ' ,response);
-            $scope.mesgSent = true;
+            $scope.msgSent = response.sent;
 
         });
 
