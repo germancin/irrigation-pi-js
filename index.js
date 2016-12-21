@@ -66,12 +66,12 @@ app.get('/notification', function(req, res) {
 
 });
 
-app.get('/reboot/:reboot', function(req, res) {
+app.get('/reboot', function(req, res) {
 
 	console.log('llego al nodejs express');
 	console.log(res);
 
-	if(req.params.reboot === 'true') {
+	if(req.query.reboot === 'true') {
 
 		//reboot the device
 		console.log('rebiiting');

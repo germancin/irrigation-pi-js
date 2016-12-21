@@ -32,7 +32,6 @@ app.controller('MainController', ['$scope','stateDevice', 'rebootService', 'noti
     $scope.rebootDevice = function () {
 
         console.log(' Reboot Device ');
-
         $scope.rebooting = true;
         rebootService.rebootDevice();
 
