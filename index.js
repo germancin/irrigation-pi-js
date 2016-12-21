@@ -73,7 +73,7 @@ app.get('/reboot/', function(req, res) {
 
 	var file = __dirname + '/public/cmds/reboot-device.sh';
 
-	if(req.params.reboot) {
+	if(req.query.reboot) {
 
 		var cmd = execFile;
 
